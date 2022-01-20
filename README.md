@@ -85,6 +85,7 @@ Remove the list style and padding from the ul element.
 The h1 element should look like this after the click event:
 
 <h1><a href="#">Programming Foundations Course Assignment</a></h1>
+
 Question 7
 Select the button with the class price.
 
