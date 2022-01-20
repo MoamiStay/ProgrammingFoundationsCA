@@ -73,15 +73,54 @@ var displaySubtract = document.getElementById("subtraction");
 displaySubtract.innerHTML = (subtract(100, 58));
 
 console.log("--- Question 6 ---");
-var button = document.querySelector("button");
 var changeButton = document.getElementsByClassName("page");
 var title = document.querySelector("title");
 var body = document.querySelector("body");
 var headline = document.querySelector("h1");
 var uList = document.querySelector("ul");
 
-//console.dir(changeButton);
-changeButton.onclick = function() {
-    title.innerHTML = "New title";
+changeButton[0].onclick = function() {
+    title.innerHTML = "Updated title";
     body.style.backgroundColor = "yellow";
+    headline.style.color = "green";
+    headline.style.fontFamily = "impact";
+    headline.innerHTML = "<a href='#'>Programming Foundations Course Assignment</a>";
+    uList.style.listStyleType = "none";
+    uList.style.padding = "0";
+
 }
+
+console.log("--- Question 7 ---");
+var priceButton = document.getElementsByClassName("price");
+var displayPrice = document.getElementById("total");
+
+var toys = [
+    {
+        name: "Lego",
+        price: 15.6,
+    },
+    {
+        name: "Master of the Universe",
+        price: "28.3",
+    },
+    {
+        name: "Barbie",
+        price: null,
+    },
+    {
+        name: "Mr Potato Head",
+        price: 89.99,
+    },
+];
+//console.log(toys);
+
+
+priceButton[0].onclick = function() {
+    var x = 0;
+    for (var i = 0; i < toys.length; i++) {
+        var item = toys[i];
+        var myPrice = Number(item.price);
+        x += (myPrice);
+    }
+    displayPrice.innerHTML = x;
+}; 
